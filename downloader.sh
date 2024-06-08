@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
 
-node "./index.js" 
+DIR="$HOME/projects/yt-scraper"
 
-soung_count=$(wc -l < ./music_links)
+node "$DIR/index.js" 
+
+soung_count=$(wc -l < "$DIR/music_links")
 echo "Downloading $soung_count songs"
 
 while read -r line; do
     yt-dlp --no-write-description -q --no-playlist --extract-audio --add-metadata --audio-format mp3 "$line"
-done < ./music_links 
+done < "$DIR/music_links" 
 
 echo "Done downloading songs"
 echo "Clearing links file"
 
-> ./music_links 
+> "$DIR/music_links" 
 
 echo "Moving songs to Music folder"
 
