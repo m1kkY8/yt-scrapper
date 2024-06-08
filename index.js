@@ -9,7 +9,7 @@ async function search(query) {
     console.log(result[0].url);
 
     //write the url to a file
-    fs.appendFileSync(path.join("/home/tox/projects/bash-scripts/", "music_links"), result[0].url + "\n")
+    fs.appendFileSync(path.join(__dirname, "music_links"), result[0].url + "\n")
 
 }
 
