@@ -2,6 +2,8 @@
 
 DIR="$HOME/projects/yt-scraper"
 
+"$DIR/main"
+
 node "$DIR/index.js" 
 
 soung_count=$(wc -l < "$DIR/music_links")
@@ -15,6 +17,8 @@ echo "Done downloading songs"
 echo "Clearing links file"
 
 > "$DIR/music_links" 
+> "$DIR/queries" 
+
 
 echo "Moving songs to Music folder"
 
