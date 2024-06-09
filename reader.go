@@ -13,9 +13,6 @@ func check(e error) {
 }
 
 func main() {
-    
-    // get directory in which dis file is placed
-    
 
     input := ""
     
@@ -23,7 +20,6 @@ func main() {
     check(err)
 
     for {
-
         fmt.Print("Enter song: ")
         reader := bufio.NewReader(os.Stdin)
 
@@ -33,13 +29,11 @@ func main() {
         input = line[:len(line)-1]
         
         if input == "exit" {
+            defer file.Close()
             return
         }
 
         _, err = file.WriteString(input + "\n")
         check(err)
-        
-        
-
     }
 }   
