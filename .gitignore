@@ -3,7 +3,6 @@ package-lock.json
 music_links
 queries
 
-*.go
 *.mp3
 *.mp4
 
