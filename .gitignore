@@ -1,7 +1,5 @@
 node_modules
 package-lock.json
-music_links
-queries
 
 *.mp3
 *.mp4
