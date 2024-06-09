@@ -1,10 +1,15 @@
 # Simple Youtube audio downloader
 
-## Dependencies
+## Dependencies 
 - Node.js
 - yt-dlp
 - ffmpeg
 - Go Lang
+
+### Instructions to install dependencies
+[Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions)
+[yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
+[ffmpeg](https://ffmpeg.org/download.html)
 
 ## Installation
 - This is for Arch Linux
