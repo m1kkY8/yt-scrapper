@@ -1,10 +1,14 @@
 # Simple Youtube audio downloader
 
-## Installation
-Make sure to have Node.js, yt-dlp and ffmpeg installed
+## Dependencies
+- Node.js
+- yt-dlp
+- ffmpeg
+- Go Lang
 
-This is for Arch Linux
-`sudo pacman -S nodejs yt-dlp ffmpeg`
+## Installation
+- This is for Arch Linux
+`sudo pacman -S nodejs yt-dlp ffmpeg go`
 
 Clone this repo somewhere on the system
 
@@ -17,9 +21,12 @@ cd yt-scrapper
 npm i
 ```
 
-Modify `downloader.sh` to change `$HOME` and path to your need
+Modify $DIR in `downloader.sh` to the path where you cloned the repo
+And make sure you have Music directory in your home directory
+
+- Note: This script is just personal project and is made to run on linux.
 
 ## Usage
 
 Simply run `./downloader.sh`
-
+![](usage.gif)
