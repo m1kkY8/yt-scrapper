@@ -6,7 +6,7 @@ DIR="$HOME/projects/yt-scraper"
 
 node "$DIR/index.js" 
 
-soung_count=$(wc -l < "$DIR/music_links")
+soung_count=$(wc -l < "$DIR/queries")
 
 if [[ "$soung_count" -eq 0 ]]; then
     echo "No songs to download"
@@ -15,10 +15,10 @@ else
     echo "Downloading $soung_count songs"
 fi
 
-if [[ -s "$DIR/music_links" ]]; then
+if [[ -s "$DIR/queries" ]]; then
     while read -r line; do
         yt-dlp --no-write-description -q --progress --no-playlist --extract-audio --add-metadata --audio-format mp3 "$line"
-    done < "$DIR/music_links" 
+    done < "$DIR/queries" 
 else
     exit 1
 fi
@@ -26,7 +26,6 @@ fi
 echo "Done downloading songs"
 echo "Clearing links file"
 
-> "$DIR/music_links" 
 > "$DIR/queries" 
 
 echo "Moving songs to Music folder"
