@@ -19,7 +19,6 @@ async function search() {
     for (let query of queries) {
         let result = await play.search(query, { limit: 1 })
         console.log(result[0].title);
-        console.log(result[0].url);
 
         fs.appendFileSync(path.join(__dirname, "queries"), result[0].url + "\n")
     }

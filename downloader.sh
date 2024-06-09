@@ -12,7 +12,7 @@ if [[ "$soung_count" -eq 0 ]]; then
     echo "No songs to download"
     exit 1
 else
-    echo "Downloading $soung_count songs"
+    echo "Downloading $soung_count song/s"
 fi
 
 if [[ -s "$DIR/queries" ]]; then
@@ -34,7 +34,7 @@ count=$(ls -1 *.mp3 2>/dev/null | wc -l)
 
 if [[ "$count" -ne 0 ]]; then
     mv *.mp3 ~/Music
-    echo "Moved $count songs to Music folder"
+    echo "Moved $count song/s to Music folder"
 else
     echo "No songs to move"
 fi

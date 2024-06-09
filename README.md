@@ -28,5 +28,6 @@ And make sure you have Music directory in your home directory
 
 ## Usage
 
-Simply run `./downloader.sh`
+Here is usage demo
+
 ![](usage.gif)
