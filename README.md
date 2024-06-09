@@ -7,9 +7,9 @@
 - Go Lang
 
 ### Instructions to install dependencies
-[Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions)
-[yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
-[ffmpeg](https://ffmpeg.org/download.html)
+[Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions)</br>
+[yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation)</br>
+[ffmpeg](https://ffmpeg.org/download.html)</br>
 
 ## Installation
 - This is for Arch Linux
