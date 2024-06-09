@@ -17,7 +17,7 @@ fi
 
 if [[ -s "$DIR/music_links" ]]; then
     while read -r line; do
-        yt-dlp --no-write-description -q --no-playlist --extract-audio --add-metadata --audio-format mp3 "$line"
+        yt-dlp --no-write-description -q --progress --no-playlist --extract-audio --add-metadata --audio-format mp3 "$line"
     done < "$DIR/music_links" 
 else
     exit 1
