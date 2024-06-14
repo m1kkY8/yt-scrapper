@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/projects/yt-scraper"
+DIR="$PWD"
 
 "$DIR/reader"
 
@@ -17,7 +17,12 @@ fi
 
 if [[ -s "$DIR/queries" ]]; then
     while read -r line; do
-        yt-dlp --no-write-description -q --progress --no-playlist --extract-audio --add-metadata --audio-format mp3 "$line"
+        yt-dlp --no-write-description -q --progress --newline \
+            --no-playlist --extract-audio --add-metadata\
+            --audio-format mp3 --audio-quality 0 \
+            --output "%(title)s.%(ext)s" \
+            "$line"
+
     done < "$DIR/queries" 
 else
     exit 1

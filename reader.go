@@ -16,7 +16,11 @@ func main() {
 
     input := ""
     
-    file, err := os.OpenFile("/home/tox/projects/yt-scraper/queries", os.O_APPEND | os.O_CREATE | os.O_RDWR, 0644)
+    currentDir, err := os.Getwd()
+    check(err)
+    queriesFile := currentDir + "/queries"
+
+    file, err := os.OpenFile(queriesFile, os.O_APPEND | os.O_CREATE | os.O_RDWR, 0644)
     check(err)
 
     for {
