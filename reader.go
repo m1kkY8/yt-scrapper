@@ -4,6 +4,7 @@ import (
     "fmt"
     "os"
     "bufio"
+    "path/filepath"
 )
 
 func check(e error) {
@@ -15,9 +16,10 @@ func check(e error) {
 func main() {
 
     input := ""
-    
-    currentDir, err := os.Getwd()
+   
+    ex, err := os.Executable()
     check(err)
+    currentDir := filepath.Dir(ex)
     queriesFile := currentDir + "/queries"
 
     file, err := os.OpenFile(queriesFile, os.O_APPEND | os.O_CREATE | os.O_RDWR, 0644)
@@ -29,9 +31,9 @@ func main() {
 
         line, err := reader.ReadString('\n')
             check(err)
-        
+
         input = line[:len(line)-1]
-        
+
         if input == "exit" {
             defer file.Close()
             return

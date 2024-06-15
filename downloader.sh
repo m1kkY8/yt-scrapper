@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-DIR="$PWD"
+DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 "$DIR/reader"
 
 node "$DIR/index.js" 
 
-soung_count=$(wc -l < "$DIR/queries")
+song_count=$(wc -l < "$DIR/queries")
 
-if [[ "$soung_count" -eq 0 ]]; then
+if [[ "$song_count" -eq 0 ]]; then
     echo "No songs to download"
     exit 1
 else
-    echo "Downloading $soung_count song/s"
+    echo "Downloading $song_count song/s"
 fi
 
 if [[ -s "$DIR/queries" ]]; then
